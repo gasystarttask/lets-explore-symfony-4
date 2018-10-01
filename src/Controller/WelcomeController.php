@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 // use Symfony\Component\HttpFoundation\Response;
 
 class WelcomeController extends AbstractController
@@ -22,10 +23,12 @@ class WelcomeController extends AbstractController
     /**
      * @Route("/hello-page", name="hello_page")
      */
-    public function hello()
+    public function hello(Request $request)
     {
+        $someVar = $request->query->get('someVar');
+
         return $this->render('hello_page.html.twig', [
-            'some_variable_name' => 'whatever we want here'
+            'some_variable_name' => $someVar,
         ]);
     }
 }
