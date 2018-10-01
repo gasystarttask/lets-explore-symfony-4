@@ -1,1 +1,10 @@
-Hello, CodeReviewVideos!
+{% extends 'base.html.twig' %}
+
+{% block title %}Some custom title{% endblock title %}
+
+{% block body %}
+
+    {{ dump() }}
+
+    Hello, {{ app.request.query.get('name') | default('CodeReviewVideos') }}!
+{% endblock %}
