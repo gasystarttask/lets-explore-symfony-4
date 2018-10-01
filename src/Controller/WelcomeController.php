@@ -4,18 +4,18 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Response;
+// use Symfony\Component\HttpFoundation\Response;
 
 class WelcomeController extends AbstractController
 {
     /**
-     * @Route("/welcome", name="welcome")
+     * @Route("/", name="welcome")
      */
     public function index()
     {
-        return new Response('<html><body>Hello</body></html>', Response::HTTP_OK);
-        // return $this->render('welcome/index.html.twig', [
-        //     'controller_name' => 'WelcomeController',
-        // ]);
+        // return new Response('<html><body>Hello</body></html>', Response::HTTP_OK);
+        return $this->render('welcome/index.html.twig', [
+            'controller_name' => 'WelcomeController',
+        ]);
     }
 }
