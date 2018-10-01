@@ -10,10 +10,21 @@ import '../css/app.scss';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 import $ from 'jquery';
-var greet = require('./greet');
+import greet from './greet';
+
+// JS is equivalent to the normal "bootstrap" package
+// no need to set this to a variable, just require it
+require('bootstrap');
+
+// // require the JavaScript
+// require('bootstrap-star-rating');
+// // require 2 CSS files needed
+// require('bootstrap-star-rating/css/star-rating.css');
+// require('bootstrap-star-rating/themes/krajee-svg/theme.css');
 
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
 
 $(document).ready(function() {
   $('body').prepend('<h1>' + greet('john') + '</h1>');
+  $('[data-toggle="popover"]').popover();
 });
