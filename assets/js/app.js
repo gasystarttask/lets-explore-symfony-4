@@ -25,6 +25,5 @@ require('bootstrap');
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
 
 $(document).ready(function() {
-  $('body').prepend('<h1>' + greet('john') + '</h1>');
   $('[data-toggle="popover"]').popover();
 });
