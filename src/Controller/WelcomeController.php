@@ -22,6 +22,7 @@ class WelcomeController extends AbstractController
 
     /**
      * @Route("/hello/{name}", name="hello_page")
+     * @Route("/hello/{name}", name="hello_page", requirements={"name"="[A-Za-z]+"})
      * @param string $name
      *
      * @return \Symfony\Component\HttpFoundation\Response
